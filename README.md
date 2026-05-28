@@ -8,9 +8,7 @@ A full-stack personal website upgrade project combining Next.js 16 frontend with
 menmen-golden-room/
 ├── nextjs-new/                 # Next.js 16 frontend application
 │   ├── app/                    # App Router pages and layouts
-│   ├── components/             # React components
 │   ├── lib/                    # Utilities and helpers
-│   ├── public/                 # Static assets
 │   ├── package.json
 │   └── tsconfig.json
 │
@@ -28,7 +26,6 @@ menmen-golden-room/
 ├── docker-compose.yml          # PostgreSQL database setup
 ├── PLAN.md                     # Project planning document (11 phases)
 ├── AUDIT_LOG.md                # Change tracking and decisions
-├── POSTGRES_SETUP.md           # Database setup instructions
 ├── .gitignore
 └── README.md                   # This file
 ```
@@ -38,7 +35,7 @@ menmen-golden-room/
 ### Prerequisites
 1. Node.js 18+ (for Next.js frontend)
 2. .NET 8 SDK (for C# backend)
-3. PostgreSQL 16+ (see POSTGRES_SETUP.md)
+3. PostgreSQL 16+ or Docker
 
 ### Frontend (Next.js)
 ```bash
