@@ -380,5 +380,15 @@
 
 ---
 
+## Git Workflow Rules
+
+1. **One Feature Branch Per Phase/Feature** - Each phase or standalone feature must be developed on its own branch, for example `feature/phase-1-setup`.
+2. **Complete Before Merge** - Finish implementation, verification, and documentation updates on the feature branch before merging.
+3. **Merge Back To Main** - After the feature branch is complete and reviewed, merge it back into `main`.
+4. **Branch From Updated Main** - Start the next phase/feature only after switching back to the updated `main` branch and creating the next feature branch from there.
+5. **Do Not Stack Feature Branches** - Avoid creating the next feature branch from an unfinished feature branch unless explicitly discussed and approved.
+
+---
+
 **Last Updated**: 2026-05-28  
 **Status**: Planning → Ready to start Phase 1

@@ -31,6 +31,26 @@ Each log entry follows this format:
 
 ## Change Log (Reverse Chronological Order)
 
+### [2026-05-28 16:45] Phase 1 Fix - Repair Frontend Git Tracking
+
+**Change Type**: Fix  
+**Branch**: `feature/phase-1-setup`  
+**Related Files**:
+- `nextjs-new/`
+- `README.md`
+- `AUDIT_LOG.md`
+
+**Change Summary**:
+- Diagnosed GitHub Actions checkout failure: `No url found for submodule path 'nextjs-new' in .gitmodules`.
+- Confirmed `nextjs-new` was tracked as Git mode `160000`, meaning a submodule/gitlink, but no `.gitmodules` mapping existed.
+- Removed the broken gitlink and recreated `nextjs-new` as a normal tracked Next.js source directory.
+- Added a minimal Next.js 16 App Router frontend with home page, health page, API URL helper, TypeScript, Tailwind v4, ESLint config, and package lock.
+- Removed generated root Markdown clutter, keeping root documentation focused on `README.md`, `PLAN.md`, and `AUDIT_LOG.md`.
+
+**Status**: ✅ Complete
+
+---
+
 ### [2026-05-28 14:30] Phase 1 Complete - Infrastructure Setup
 
 **Change Type**: Feature  
@@ -38,8 +58,6 @@ Each log entry follows this format:
 **Related Files**:
 - nextjs-new/ (complete)
 - backend/ (complete)
-- PHASE_1_SUMMARY.md
-- POSTGRES_SETUP.md
 - README.md (updated)
 - start-dev.bat
 
@@ -137,7 +155,7 @@ Each log entry follows this format:
 ## Current Progress Overview
 
 ### Project Phase Status
-- ⏳ Phase 1: Project Initialization & Infrastructure - **Ready to Start**
+- 🔄 Phase 1: Project Initialization & Infrastructure - **Frontend/backend foundation restored, verification in progress**
 - ⏹️ Phase 2: Content Migration - Not Started
 - ⏹️ Phase 3: Course Notes Module - Not Started
 - ⏹️ Phase 4: Photo Gallery Module - Not Started
@@ -151,18 +169,20 @@ Each log entry follows this format:
 
 ### Task Completion Summary
 - Total: 11 Phases, 50+ subtasks
-- Completed: 0
-- In Progress: 0
-- Remaining: 11 Phases
+- Completed: Phase 1 foundation tasks
+- In Progress: Phase 1 CI/frontend-backend verification
+- Remaining: Phase 2+
 
 ---
 
 ## Issue Tracker
 
 ### Open Issues
-1. **File Storage Solution** - Should we use S3 or local storage?
-2. **User Authentication** - Do we need GitHub OAuth login?
-3. **Comment System** - Should we implement article comments?
+1. **CI Verification** - Push `feature/phase-1-setup` and confirm GitHub Actions no longer fails during checkout.
+2. **Frontend-Backend Runtime Verification** - Run both apps locally and confirm `/health` reaches `/api/health`.
+3. **File Storage Solution** - Should we use S3 or local storage?
+4. **User Authentication** - Do we need GitHub OAuth login?
+5. **Comment System** - Should we implement article comments?
 
 ### Resolved Issues
 (None yet)
