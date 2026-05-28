@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MenmenGoldenHouse.Api/MenmenGoldenHouse.Api.csproj" />
+  <Project Path="MenmenGoldenHouse.Core/MenmenGoldenHouse.Core.csproj" />
+  <Project Path="MenmenGoldenHouse.Data/MenmenGoldenHouse.Data.csproj" />
+</Solution>

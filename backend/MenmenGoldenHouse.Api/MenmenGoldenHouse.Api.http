@@ -1,0 +1,6 @@
+@MenmenGoldenHouse.Api_HostAddress = http://localhost:5064
+
+GET {{MenmenGoldenHouse.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

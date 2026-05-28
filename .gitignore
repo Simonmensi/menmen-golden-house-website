@@ -1,0 +1,63 @@
+# Git ignore for Menmen's Golden House project
+
+# Node/Frontend
+node_modules/
+.next/
+dist/
+build/
+*.log
+npm-debug.log*
+
+# .NET/Backend
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.suo
+.vs/
+.vscode/
+launchSettings.json
+
+# IDEs
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary
+*.tmp
+*.temp
+/temp/
+/tmp/
+
+# Build artifacts
+dist/
+build/
+
+# Documentation site
+.docusaurus/
+website/build/
+
+# Generated files
+*.generated.ts
+*.generated.cs

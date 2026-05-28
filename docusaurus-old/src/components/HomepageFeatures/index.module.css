@@ -1,0 +1,38 @@
+.features {}
+
+.cardLink { text-decoration: none; }
+
+.card {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+/* 固定一个视觉高度，也可再调高/更矮 */
+.imageWrap {
+  width: 100%;
+  height: 400px;             /* 想更高就 300/320 */
+  display: grid;
+  place-items: center;       /* 让图居中 */
+  background: #f6f8fb;       /* 淡底色，可换成透明 */
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* 关键：完整展示，不裁剪 */
+.imageContain {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+/* 描述文字改橙色；加 !important 提升权重压过主题默认色 */
+.description {
+  color: #fb923c !important;     /* Simon’s precious love 的橙 */
+  margin-top: 2px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+}
